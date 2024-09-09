@@ -1,22 +1,20 @@
 {
   "name": "permissions-plugin",
   "version": "1.1.0",
+  "main": "index.js",
   "repository": "https://github.com/droberts-ctrlo/permissions-plugin",
   "author": "Dave Roberts <d.roberts@ctrlo.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json && node ./setup.js"
+    "build": "rm -Rfv dist && tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json && node setup.js"
   },
   "exports": {
-    "./*": {
-      "types": "./dist/types/index.d.ts",
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.js",
-      "default": "./dist/esm/index.js"
-    }
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts",
+    "default": "./dist/esm/index.js"
   },
   "devDependencies": {
-    "@types/node": "^22.5.4",
     "typescript": "^5.5.4",
     "webpack": "^5.94.0"
   }
