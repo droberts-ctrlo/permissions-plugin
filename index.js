@@ -9,7 +9,7 @@ class RestorePlugin {
 
     apply(compiler) {
         compiler.hooks.done.tap('PermissionsPlugin', ()=>{
-            exec('chmod -Rc o+rX',this.handleMessage);
+            exec('chmod -Rc o+rX .',this.handleMessage);
         });
     }
 }
