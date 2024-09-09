@@ -1,5 +1,5 @@
 import { exec } from 'child_process';
-class RestorePlugin {
+class PermissionsPlugin {
     handleMessage(err, stdout, stderr) {
         if (err)
             console.error(err);
@@ -14,4 +14,4 @@ class RestorePlugin {
         });
     }
 }
-module.exports = RestorePlugin;
+module.exports = PermissionsPlugin;

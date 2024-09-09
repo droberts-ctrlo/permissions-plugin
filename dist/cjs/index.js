@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const child_process_1 = require("child_process");
-class RestorePlugin {
+class PermissionsPlugin {
     handleMessage(err, stdout, stderr) {
         if (err)
             console.error(err);
@@ -16,4 +16,4 @@ class RestorePlugin {
         });
     }
 }
-module.exports = RestorePlugin;
+module.exports = PermissionsPlugin;
